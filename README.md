@@ -1,8 +1,13 @@
-== Gem Installer
+Gem Installer
+=============
 
 Simple cookbook for managing gem versions on a node.
 
-=== Usage
+Usage
+=====
+
+Attributes
+----------
 
 Define gems (and optionally version restrictions) within the role:
 
@@ -13,6 +18,15 @@ Define gems (and optionally version restrictions) within the role:
       'ssmtp'
     ]
   )
+
+Data Bag
+--------
+
+The GemInstaller uses the BagConfig cookbook to allow configuration
+via data bag entries. For more information for data bag configuration
+please see:
+
+https://github.com/chrisroberts/cookbook-bag_config
 
 === Issues/Bugs/Feature Requests
 

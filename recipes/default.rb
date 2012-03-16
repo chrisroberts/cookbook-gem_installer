@@ -1,6 +1,6 @@
 # Iterate and install gems
 
-node[:gems_installer][:gems].each do |gem_info|
+bag_or_node(:gems).each do |gem_info|
   gem_info = [gem_info] unless gem_info.is_a?(Array)
   gem = gem_package gem_info.first do
     action :nothing
