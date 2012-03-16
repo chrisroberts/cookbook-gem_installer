@@ -11,6 +11,7 @@ Attributes
 
 Define gems (and optionally version restrictions) within the role:
 
+```ruby
   override_attributes(
     :gem_installer => [
       'pg',
@@ -18,6 +19,7 @@ Define gems (and optionally version restrictions) within the role:
       'ssmtp'
     ]
   )
+```
 
 Data Bag
 --------
@@ -28,7 +30,8 @@ please see:
 
 https://github.com/chrisroberts/cookbook-bag_config
 
-=== Issues/Bugs/Feature Requests
+Issues/Bugs/Feature Requests
+----------------------------
 
 Create a github issue or fork, fix and send me a pull request
 
