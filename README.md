@@ -13,20 +13,36 @@ Define gems (and optionally version restrictions) within the role:
 
 ```ruby
   override_attributes(
-    :gem_installer => [
-      'pg',
-      ['activerecord', '~> 3.0.0'],
-      'ssmtp'
-    ]
+    :gem_installer => {
+      :gems => [
+        'pg',
+        ['activerecord', '~> 3.0.0'],
+        'ssmtp'
+      ]
+    }
+  )
+```
+
+or
+
+
+```ruby
+  override_attributes(
+    :gem_installer => {
+      :gems => {
+        'pg' => nil,
+        'activerecord' =>  '~> 3.0.0',
+        'ssmtp' => nil
+      }
+    }
   )
 ```
 
 Data Bag
 --------
 
-The GemInstaller uses the BagConfig cookbook to allow configuration
-via data bag entries. For more information for data bag configuration
-please see:
+Data bag support is provided via BagConfig and is no longer required. For
+more information see:
 
 https://github.com/chrisroberts/cookbook-bag_config
 
