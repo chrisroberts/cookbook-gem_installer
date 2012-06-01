@@ -14,21 +14,6 @@ Define gems (and optionally version restrictions) within the role:
 ```ruby
   override_attributes(
     :gem_installer => {
-      :gems => [
-        'pg',
-        ['activerecord', '~> 3.0.0'],
-        'ssmtp'
-      ]
-    }
-  )
-```
-
-or
-
-
-```ruby
-  override_attributes(
-    :gem_installer => {
       :gems => {
         'pg' => nil,
         'activerecord' =>  '~> 3.0.0',
@@ -38,13 +23,21 @@ or
   )
 ```
 
-Data Bag
---------
+Chef Gems
+---------
 
-Data bag support is provided via BagConfig and is no longer required. For
-more information see:
+Managing chef gems works in just same way, but by using the :chef_gems key
+instead of :gems
 
-https://github.com/chrisroberts/cookbook-bag_config
+```ruby
+  override_attributes(
+    :gem_installer => {
+      :chef_gems => {
+        'pg' => nil
+      }
+    }
+  )
+```
 
 Issues/Bugs/Feature Requests
 ----------------------------
