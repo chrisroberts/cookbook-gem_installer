@@ -39,6 +39,12 @@ instead of :gems
   )
 ```
 
+Backwards Compatibility
+-----------------------
+
+Use the [chef_gem]{http://community.opscode.com/cookbooks/chef_gem} cookbook to 
+maintain compatibility on node running Chef pre 0.10.9
+
 Issues/Bugs/Feature Requests
 ----------------------------
 
